@@ -4,3 +4,5 @@
 ### [2020.11.17 - java.io.file](https://www.notion.so/2020-11-17-e301dcfbe742417b958e4d88852482d5)
 ### [2020.11.18 - shell cat 구현](https://github.com/pbg0205/codesquad-cocoa-java/tree/master/mission06#2-%EA%B5%AC%ED%98%84-%EB%A1%9C%EC%A7%81)
 ### [2020.11.19 - java.io 기본 개념](https://www.notion.so/Java-IO-fe45e4dfd1904674959c428e3d45bcc9)
+### [2020.11.20 - 알고리즘 문제](https://github.com/pbg0205/codesquad-cocoa-java/blob/master/mission06/README.md#day15-algorithm-day)
+### [2020.11.21 - 쓰레드 start & run 차이](https://www.notion.so/Thread-start-run-8bfda41708b84f849048d8b21d5a1294)
