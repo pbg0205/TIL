@@ -1,4 +1,5 @@
 # TIL(Today I Learned)
+###[조금이라도 꾸준히]
 ### [2020.11.15 - 예외처리(Exception)](https://www.notion.so/exception-handling-df5947e768364115ac355ded38c9b90e)
 ### [2020.11.16 - 쉘(Shell) 명령어](https://github.com/pbg0205/codesquad-cocoa-java/tree/master/mission05#day11%EB%AF%B8%EC%85%98-5-%EC%85%B8-%EB%A7%8C%EB%93%A4%EA%B8%B0)
 ### [2020.11.17 - java.io.file](https://www.notion.so/2020-11-17-e301dcfbe742417b958e4d88852482d5)
@@ -6,3 +7,5 @@
 ### [2020.11.19 - java.io 기본 개념](https://www.notion.so/Java-IO-fe45e4dfd1904674959c428e3d45bcc9)
 ### [2020.11.20 - 알고리즘 문제](https://github.com/pbg0205/codesquad-cocoa-java/blob/master/mission06/README.md#day15-algorithm-day)
 ### [2020.11.21 - 쓰레드 start & run 차이](https://www.notion.so/Thread-start-run-8bfda41708b84f849048d8b21d5a1294)
+### [2020.11.23 - 2048 게임 만들기](https://github.com/pbg0205/codesquad-cocoa-java/tree/master/mission07#day16%EB%AF%B8%EC%85%98-7-2048%EA%B2%8C%EC%9E%84)
+### [2020.11.24 - 생성자 대신 정적 팩터리 메서드를 고려하라(이펙티브 자바)](https://www.notion.so/1-639a79d581734c5fb7f14e02486516a8)
