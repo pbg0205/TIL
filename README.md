@@ -1,5 +1,5 @@
 # TIL(Today I Learned)
-###[조금이라도 꾸준히]
+### [조금이라도 꾸준히]
 ### [2020.11.15 - 예외처리(Exception)](https://www.notion.so/exception-handling-df5947e768364115ac355ded38c9b90e)
 ### [2020.11.16 - 쉘(Shell) 명령어](https://github.com/pbg0205/codesquad-cocoa-java/tree/master/mission05#day11%EB%AF%B8%EC%85%98-5-%EC%85%B8-%EB%A7%8C%EB%93%A4%EA%B8%B0)
 ### [2020.11.17 - java.io.file](https://www.notion.so/2020-11-17-e301dcfbe742417b958e4d88852482d5)
@@ -9,3 +9,4 @@
 ### [2020.11.21 - 쓰레드 start & run 차이](https://www.notion.so/Thread-start-run-8bfda41708b84f849048d8b21d5a1294)
 ### [2020.11.23 - 2048 게임 만들기](https://github.com/pbg0205/codesquad-cocoa-java/tree/master/mission07#day16%EB%AF%B8%EC%85%98-7-2048%EA%B2%8C%EC%9E%84)
 ### [2020.11.24 - 생성자 대신 정적 팩터리 메서드를 고려하라(이펙티브 자바)](https://www.notion.so/1-639a79d581734c5fb7f14e02486516a8)
+### [2020.11.25 - 2048게임 UI 만들기 및 그림판 예제 공부](https://github.com/pbg0205/codesquad-cocoa-java/tree/master/mission07#day18%EB%AF%B8%EC%85%98-8-2048-ui-%EA%B5%AC%ED%98%84%ED%95%98%EA%B8%B0--%EA%B7%B8%EB%A6%BC%ED%8C%90-%EC%84%A0%EA%B7%B8%EB%A6%AC%EA%B8%B0)
