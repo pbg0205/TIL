@@ -11,3 +11,6 @@
 ### [2020.11.24 - 생성자 대신 정적 팩터리 메서드를 고려하라(이펙티브 자바)](https://www.notion.so/1-639a79d581734c5fb7f14e02486516a8)
 ### [2020.11.25 - 2048게임 UI 만들기 및 그림판 예제 공부](https://github.com/pbg0205/codesquad-cocoa-java/tree/master/mission07#day18%EB%AF%B8%EC%85%98-8-2048-ui-%EA%B5%AC%ED%98%84%ED%95%98%EA%B8%B0--%EA%B7%B8%EB%A6%BC%ED%8C%90-%EC%84%A0%EA%B7%B8%EB%A6%AC%EA%B8%B0)
 ### [2020.11.26 - 생성자에 매개변수가 많다면 빌더를 고려하라.(이펙티브 자바)](https://www.notion.so/2-7f9a1f88079d45c590da74b5377b6844)
+### [2020.11.27 - 알고리즘 문제](https://github.com/pbg0205/codesquad-cocoa-java/tree/master/mission07#day20-%EC%95%8C%EA%B3%A0%EB%A6%AC%EC%A6%98-%EB%8D%B0%EC%9D%B4)
+### [2020.11.28 - private 생성자나 열거 타입으로 싱클턴임을 보증하라(이페티브 자바)](https://www.notion.so/3-private-1d0ffa2fc8cd4b68b48bd55809a1f06c)
+### [2020.11.29 -인스턴스화를 막을거든 private 생성자를 사용하라(이펙티브 자바)](https://www.notion.so/4-private-83f98e0543aa426b80789aadaa2ea2b2) 
