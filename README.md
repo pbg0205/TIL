@@ -16,3 +16,4 @@
 ### [2020.11.29 -인스턴스화를 막을거든 private 생성자를 사용하라(이펙티브 자바)](https://www.notion.so/4-private-83f98e0543aa426b80789aadaa2ea2b2)
 ### [2020.11.30 -자원 직접 명시하지 말고 의존 객체 주입을 사용하라(이펙티브 자바)](https://www.notion.so/5-af40363421ac47719eff06e58d2dbb16) 
 ### [2020.12.03 -불필요한 객체 생성을 피하라(이펙티브 자바)](https://www.notion.so/6-a8ed673f948b44aaa904388dda5f4993)
+### [2020.12.05 -다 쓴 객체 참조를 해제하라.(이펙티브 자바)](https://www.notion.so/7-4f12d73c89ca46b0a92dbca1dd32e3b3)
