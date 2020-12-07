@@ -18,3 +18,4 @@
 ### [2020.12.03 - 불필요한 객체 생성을 피하라(이펙티브 자바)](https://www.notion.so/6-a8ed673f948b44aaa904388dda5f4993)
 ### [2020.12.05 - 다 쓴 객체 참조를 해제하라.(이펙티브 자바)](https://www.notion.so/7-4f12d73c89ca46b0a92dbca1dd32e3b3)
 ### [2020.12.06 - try-finally 보다는 try-with-resources를 사용하라(이펙티브자바)](https://www.notion.so/9-try-finally-try-with-resources-21bc390f96c0460292ab35157dadab7c)
+### [2020.12.07 - equals는 일반 규약을 지켜 재정의하라.(이펙티브자바)](https://www.notion.so/10-equals-91d4c3789d8c46f7919c33facc91f3e0)
