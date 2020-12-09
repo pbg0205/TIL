@@ -21,3 +21,4 @@
 ### [2020.12.07 - equals는 일반 규약을 지켜 재정의하라.(이펙티브자바)](https://www.notion.so/10-equals-91d4c3789d8c46f7919c33facc91f3e0)
 ### [2020.12.08 - equals도 재정의 하려거든 hashcode도 재정의하라.(이펙티브자바)](https://www.notion.so/11-equals-hashcode-f643228331a04db88ecfb9f65b33f81e)
 ### [2020.12.09 - toString을 항상 재정의하라.(이펙티브자바)](https://www.notion.so/12-toString-6b9d23b1a4824b50948b55ef9b97cbfe)
+### [2020.12.10 - Comparable을 구현할지 고려하라.(이펙티브자바)](https://www.notion.so/14-Comparable-e58381fd79ae4cf78381f2395b7d122e)
