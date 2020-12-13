@@ -24,3 +24,4 @@
 ### [2020.12.10 - Comparable을 구현할지 고려하라.(이펙티브자바)](https://www.notion.so/14-Comparable-e58381fd79ae4cf78381f2395b7d122e)
 ### [2020.12.11 - 클래스와 멤버의 접근 권한을 최소화하라.(이펙티브자바)](https://www.notion.so/15-cb4a454f81c84b5ca03729b99b0e8d49)
 ### [2020.12.12 - public 클래스에서는 public 필드가 아닌 접근자 메서드를 사용하라.(이펙티브자바)](https://www.notion.so/16-public-public-d9d52d71e2b3458480b39262cf15afef)
+### [2020.12.13 - 변경 가능성을 최소화하라.(이펙티브자바)](https://www.notion.so/18-304c535ad4654df3a8658648548b15b3)
