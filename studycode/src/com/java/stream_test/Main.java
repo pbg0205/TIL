@@ -3,12 +3,18 @@ package com.java.stream_test;
 import java.sql.SQLOutput;
 import java.util.Arrays;
 import java.util.List;
+import java.util.Optional;
 import java.util.stream.Collectors;
 
 class Main {
     public static void main(String[] args) {
         List<Dish> menu = initMenu();
         List<Dish> specialMenu = iniSpecialMenu();
+
+
+
+
+
 
         /*
          * 1. filter : 람다를 인수로 받아 스트림에서 스트렘에서 특정 요소를 제외
@@ -109,6 +115,11 @@ class Main {
 
 
         //10. 고유문자로 이루어진 리스트를 반환하기.
+
+        /*
+         * flatMap : 각 값을 다른 스트림으로 만든 다음에
+         *               모든 스트림을 하나의 스트림으로 연결하는 기능을 수행.
+         */
         List<String> uniqueCharacters
                 = words.stream()
                 .map(word -> word.split(""))
@@ -117,6 +128,87 @@ class Main {
                 .collect(Collectors.toList());
 
         System.out.println(uniqueCharacters);
+
+
+        //11. 각 숫자의 제곱근으로 이루어진 리스트를 반화하시오.
+        List<Integer> numbers1 = Arrays.asList(1, 2, 3, 4, 5);
+        List<Integer> squares
+                = numbers1.stream()
+                .map(n -> n * n)
+                .collect(Collectors.toList());
+
+        System.out.println(squares);
+
+
+        //12. 두 개의 숫자 리스트가 있을 때 모든 숫자 쌍의 리스트를 반환하시오.
+        List<Integer> numbers2 = Arrays.asList(1, 2, 3);
+        List<Integer> numbers3 = Arrays.asList(3, 4);
+        List<int[]> pairs
+                = numbers2.stream()
+                .flatMap(i -> numbers3.stream()
+                        .map(j -> new int[]{i, j}))
+                .collect(Collectors.toList());
+
+        for (int[] pair : pairs) {
+            System.out.println(pair[0] + ":" + pair[1]);
+        }
+
+        //13.합이 3으로 나누어떨어지는 쌍만 반환하기
+        List<int[]> pairs2
+                = numbers2.stream()
+                .flatMap(i -> numbers3.stream()
+                        .filter(j -> (i + j) % 3 == 0)
+                        .map(j -> new int[]{i, j})
+                )
+                .collect(Collectors.toList());
+
+        for (int[] pair : pairs2) {
+            System.out.println(pair[0] + ":" + pair[1]);
+        }
+
+
+
+
+
+        /*
+         * - 쇼트서킷
+         *      1. 표현식에서 하나라도 거짓이라는 결과가 나오면 나머지 표현식의 결과와
+         *         상관없이 전체 결과를 반환할 수 있다.
+         *      2. 모든 스트림의 요소를 처리하지 않고도 결과를 반환할 수 있다.
+         *      ex) allMatch, noneMatch, findFirst, findAny
+         */
+
+        //14. menu에 채식요리가 있는지 확인
+        /*
+         * anyMatch : 적어도 한 요소와일치하는지 확인할 때
+         */
+        if(menu.stream().anyMatch(Dish::isVegiterian)) {
+            System.out.println("The menu is (somewwhat) vegiterian friendly!!");
+        }
+
+        //15. 모든 요리가 1000칼로리 이하면 건강식으로 간주하기
+        /*
+         * allMatch : 모든 요소가 주어진 프레디케이트와 일치
+         * noneMatch : 주어진 프레디케이트와 일치하는 요소가 없는지 확인
+         */
+        boolean isHealthy
+                = menu.stream()
+                .allMatch(dish -> dish.getCalories() <= 1000);
+
+        isHealthy
+                = menu.stream()
+                .noneMatch(dish -> dish.getCalories() >= 1000);
+
+        //16. 채식 요리 중, 임의의 요리를 반환
+        /*
+         * findAny : 현재 스트림에서 임의의 요소를 반환.
+         */
+        Optional<Dish> dish
+                = menu.stream()
+                .filter(Dish::isVegiterian)
+                .findAny();
+
+        System.out.println(dish);
     }
 
     private static List<Dish> initMenu() {
