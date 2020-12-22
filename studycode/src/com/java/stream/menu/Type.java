@@ -1,4 +1,4 @@
-package com.java.stream_test;
+package com.java.stream.menu;
 
 enum Type {
     MEAT,

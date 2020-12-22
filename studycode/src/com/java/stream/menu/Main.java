@@ -1,6 +1,5 @@
-package com.java.stream_test;
+package com.java.stream.menu;
 
-import java.sql.SQLOutput;
 import java.util.Arrays;
 import java.util.List;
 import java.util.Optional;
@@ -10,9 +9,6 @@ class Main {
     public static void main(String[] args) {
         List<Dish> menu = initMenu();
         List<Dish> specialMenu = iniSpecialMenu();
-
-
-
 
 
 
@@ -27,7 +23,7 @@ class Main {
         List<String> threeHighCalroricDishNames
                 = menu.stream()
                 .filter(dish -> dish.getCalories() > 300)
-                .map(dish -> dish.getName())
+                .map(Dish::getName)
                 .limit(3)
                 .collect(Collectors.toList());
 
@@ -168,8 +164,6 @@ class Main {
 
 
 
-
-
         /*
          * - 쇼트서킷
          *      1. 표현식에서 하나라도 거짓이라는 결과가 나오면 나머지 표현식의 결과와
@@ -182,7 +176,7 @@ class Main {
         /*
          * anyMatch : 적어도 한 요소와일치하는지 확인할 때
          */
-        if(menu.stream().anyMatch(Dish::isVegiterian)) {
+        if (menu.stream().anyMatch(Dish::isVegiterian)) {
             System.out.println("The menu is (somewwhat) vegiterian friendly!!");
         }
 
@@ -194,10 +188,7 @@ class Main {
         boolean isHealthy
                 = menu.stream()
                 .allMatch(dish -> dish.getCalories() <= 1000);
-
-        isHealthy
-                = menu.stream()
-                .noneMatch(dish -> dish.getCalories() >= 1000);
+                /* 같은 방식 : noneMatch(dish -> dish.getCalories() >= 1000; */
 
         //16. 채식 요리 중, 임의의 요리를 반환
         /*
@@ -209,10 +200,62 @@ class Main {
                 .findAny();
 
         System.out.println(dish);
+
+        /*
+         * - Optional<T> 클래스
+         *      1. 값의 존재나 부재 여부를 표현하는 컨테이너 클래스.
+         *      2. 값이 존재하는지 확인하고 값이 없을 때 어떻게 처리할지 강제하는 기능을 제공
+         *
+         *  - 관련 메서드
+         *      1. isPresent() : Optional이 값 포함(true), 값 미포함(false) 반환
+         *      2. isPresent(Consumer<T> block) :Optional 값이 있으면 주어진 블록을 실행.
+         *      3. T get() : 값이 존재하면 값을 반환, 없으면 NoSuchElementException
+         *      4. T orElse(T other) : 값이 있으면 값을 반환, 없으면 기본값 반환.
+         */
+
+
+        //17. 첫번 째 요소 찾기
+        /*
+         * findFirst, findAny가 모두 필요한 이유.
+         * 1. 병렬 실행에서 첫 번째 요소를 찾기 어렵다.
+         * 2. 요소의 반환 순서가 상관없다면 병렬 스트림에서는 제약이 적은 findAny 사용.
+         */
+        List<Integer> someNumbers = Arrays.asList(1, 2, 3, 4, 5);
+        Optional<Integer> firstSquareDivisibleByThree
+                = someNumbers.stream()
+                .map(n -> n * n)
+                .filter(n -> n % 3 == 0)
+                .findFirst();
+
+        System.out.println(firstSquareDivisibleByThree);
+
+
+        //18. 메뉴의 모든 칼로리의 합계를 구하시오.
+        //int sum = numbers.stream().reduce(0, (a, b) -> a + b); // (초기값, 연산)
+        int sum = numbers.stream().reduce(0, Integer::sum);
+
+        System.out.println(sum);
+
+        //19. 최대값 구하기
+        Optional<Integer> max = numbers.stream().reduce(Integer::max);
+        System.out.println(max);
+        // - reduce 연산에서 method 참조를 하는 경우, return type이 Optional이 된다.
+
+
+        //20. 최소값 구하기
+        Optional<Integer> min = numbers.stream().reduce(Integer::min);
+        System.out.println(min);
+
+
+        //21. map과 reduce를 이용해서 스트리므이 요리 개수를 계산하시오.
+        int count = menu.stream()
+                .map(d -> 1)
+                .reduce(0, Integer::sum);
+        System.out.println(count);
     }
 
     private static List<Dish> initMenu() {
-        List<Dish> menu = Arrays.asList(
+        return Arrays.asList(
                 new Dish("pork", false, 800, Type.MEAT),
                 new Dish("beef", false, 700, Type.MEAT),
                 new Dish("chicken", false, 400, Type.MEAT),
@@ -223,17 +266,15 @@ class Main {
                 new Dish("prawns", false, 400, Type.FISH),
                 new Dish("salmon", false, 450, Type.FISH)
         );
-        return menu;
     }
 
     private static List<Dish> iniSpecialMenu() {
-        List<Dish> specialMenu = Arrays.asList(
+        return Arrays.asList(
                 new Dish("season fruit", true, 120, Type.OTHER),
                 new Dish("prawns", false, 300, Type.FISH),
                 new Dish("rice", true, 350, Type.OTHER),
                 new Dish("chicken", false, 400, Type.MEAT),
                 new Dish("french fries", true, 530, Type.OTHER)
         );
-        return specialMenu;
     }
 }

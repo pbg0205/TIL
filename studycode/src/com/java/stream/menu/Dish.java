@@ -1,4 +1,4 @@
-package com.java.stream_test;
+package com.java.stream.menu;
 
 class Dish {
     private final String name;
@@ -6,26 +6,26 @@ class Dish {
     private final int calories;
     private final Type type;
 
-    public Dish(String name, boolean vegiterian, int calories, Type type) {
+    Dish(String name, boolean vegiterian, int calories, Type type) {
         this.name = name;
         this.vegiterian = vegiterian;
         this.calories = calories;
         this.type = type;
     }
 
-    public String getName() {
+    String getName() {
         return name;
     }
 
-    public boolean isVegiterian() {
+    boolean isVegiterian() {
         return vegiterian;
     }
 
-    public int getCalories() {
+    int getCalories() {
         return calories;
     }
 
-    public Type getType() {
+    Type getType() {
         return type;
     }
 
