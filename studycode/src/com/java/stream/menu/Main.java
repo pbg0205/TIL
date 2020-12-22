@@ -3,7 +3,10 @@ package com.java.stream.menu;
 import java.util.Arrays;
 import java.util.List;
 import java.util.Optional;
+import java.util.OptionalInt;
 import java.util.stream.Collectors;
+import java.util.stream.IntStream;
+import java.util.stream.Stream;
 
 class Main {
     public static void main(String[] args) {
@@ -236,6 +239,7 @@ class Main {
 
         System.out.println(sum);
 
+
         //19. 최대값 구하기
         Optional<Integer> max = numbers.stream().reduce(Integer::max);
         System.out.println(max);
@@ -247,11 +251,61 @@ class Main {
         System.out.println(min);
 
 
-        //21. map과 reduce를 이용해서 스트리므이 요리 개수를 계산하시오.
+        //21. map과 reduce를 이용해서 스트림의 요리 개수를 계산하시오.
         int count = menu.stream()
                 .map(d -> 1)
                 .reduce(0, Integer::sum);
         System.out.println(count);
+
+        //22. 메뉴의 칼로리 합계 계산하기(기본형 특화 스트림)
+        int calrories
+                = menu.stream()
+                .mapToInt(Dish::getCalories)
+                .sum();
+
+        System.out.println(calrories);
+
+        //23. 기본형 특화 스트림 -> 객체 스트림 복원
+        IntStream intStream = menu.stream().mapToInt(Dish::getCalories);
+        Stream<Integer> stream = intStream.boxed(); //boxed : 특화 스트림 -> 일반 스트림 변환
+
+
+        //24. OptionalInt : 기본형 특화 스트림 버전
+        OptionalInt maxCalrories
+                = menu.stream()
+                .mapToInt(Dish::getCalories)
+                .max();
+
+        System.out.println(maxCalrories);
+
+
+        //25. OptionalInt를 이용해서 최대값이 없는 상황에서 사용할 기본값 명시
+        int max2 = maxCalrories.orElse(1); //orElse : 값이 없을 때 기본 최댓값을 명시적으로 설정
+        System.out.println(max2);
+
+
+        //26. 숫자 범위를 지정해서 짝수 구하기
+        IntStream evenNumbers
+                = IntStream.rangeClosed(1, 100)
+                .filter(number -> number % 2 == 0);
+
+        System.out.println(evenNumbers.count());
+
+
+        //27. 값으로 스트림 만들기
+        Stream<String> stream2 = Stream.of("Modern", "Java", "In", "Action");
+        stream2.map(String::toUpperCase).forEach(System.out::println);
+
+        //28. 스트림 비우기
+        Stream<String> emptyStream = Stream.empty();
+
+        //29. null이 될 수 있는 객체로 스트림 만들기
+        String homeValue = System.getProperty("home");
+        Stream<String> homeValueStream
+                = homeValue == null ? Stream.empty() : Stream.of("Modern", "Java", "In", "Action");
+        System.out.println(homeValue);
+
+
     }
 
     private static List<Dish> initMenu() {
