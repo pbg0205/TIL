@@ -41,3 +41,4 @@
 ### [2020.12.29 - int 상수 대신 열거 타입을 사용하라.(이펙티브 자바)](https://www.notion.so/34-int-2760ecf7a39b4ccd845792abd60cb379)
 ### [2020.12.30 - ordinal 메서드 대신 인스턴스 필드를 사용하라.(이펙티브 자바)](https://www.notion.so/ordinal-235c5d2a5b9f47a091f59900f54807d9)
 ### [2021.01.01 - 비트 필드 대신 EnumSet을 사용하라.(이펙티브 자바)](https://www.notion.so/36-EnumSet-dd521309fa034bd0bf54ce45d79a2996)
+### [tistory로 이사가겠습니다!](https://pbg0205.tistory.com/)
